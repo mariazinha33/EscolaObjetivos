@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap&#39;);
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-     --cor-de-fundo: #1E1E1E;
+    --cor-de-fundo: #1E1E1E;
     --verde: #6FFF57;
     --branco: #FFFFFF;
     --botao-ativo: #3A375E;
@@ -12,7 +12,7 @@
 body {
     font-family: 'Bebas Neue', sans-serif;
     background-color: var(--cor-de-fundo);
-    color: var(--branco); /* Corrigido aqui */
+    color: var(--branco);
 }
 
 .conteudo-principal {
@@ -35,39 +35,29 @@ body {
     color: var(--verde);
 }
 
+.botoes {
+    display: block;
+}
+
 .botao {
     font-family: 'Bebas Neue', sans-serif;
     background-color: var(--botao-inativo);
     color: var(--branco);
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 1em;
     font-size: 18px;
-    align-items: center;
     width: 100%;
     border-bottom: 4px solid var(--botao-ativo);
     border-left: 2px solid var(--botao-ativo);
     border-right: 2px solid var(--botao-ativo);
     border-top: none;
+    transition: all 0.3s ease-in-out;
 }
 
 .botao:first-child {
     border-radius: 40px 40px 0 0;
-}
-
-.botoes {
-    display: block;
-}
-.contador{
-    text-align: center;
-    font-size: 20px;
-}
-
-
-.abas-textos {
-    background-color: var(--texto-fundo);
-    padding: 40px;
-    border-radius: 40px 40px 40px 40px;
 }
 
 .botao.ativo {
@@ -75,22 +65,22 @@ body {
     border-bottom: 4px solid var(--verde);
     box-shadow: 0px 2px 10px rgba(0, 255, 0, 0.2);
 }
-.botao, .botao.ativo {
-    transition: all 0.3s ease-in-out;
-}
 
-
-
-.aba-conteudo.ativo {
-    display: block;
+.abas-textos {
+    background-color: var(--texto-fundo);
+    padding: 40px;
+    border-radius: 40px;
 }
 
 .aba-conteudo {
     display: none;
 }
 
+.aba-conteudo.ativo {
+    display: block;
+}
+
 .aba-conteudo-titulo-principal {
- 
     font-size: 24px;
     text-align: center;
 }
@@ -100,11 +90,12 @@ body {
     color: var(--verde);
     text-transform: uppercase;
 }
-.contador{
+
+.contador {
     font-size: 20px;
     text-align: center;
-   
 }
+
 @media screen and (min-width: 768px) {
     .botoes {
         display: flex;

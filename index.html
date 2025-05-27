@@ -1,44 +1,111 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br">         
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meus Objetivos do an 2025itle>
+    <title>Meus Objetivos do ano</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <section class="conteudo-principal">
-        <h1 class="titulo-principal">Meus objetivos do ano <span>_</span> </h1>
+        <h1 class="titulo-principal">Meus objetivos do ano <span class="ano"></span> </h1>
         <div class="conteudo">
         <div class="botoes">
-            <button class="botao ativo">Cursos na Alura</button>
-            <button class="botao">Criar projetos em Javascript</button>
-            <button class="botao">Criar um portifolio</button>
-            <button class="botao">Atualizar meu currículo</button>
+            <button class="botao ativo">Terminar minha faculdade</button>
+            <button class="botao">Comprar um carro novo</button>
+            <button class="botao">Uma viagem com a familha</button>
+            <button class="botao">Um emprego novo como programador senior no exterior</button>
         </div>
         <div class="abas-textos">
             <div class="aba-conteudo">
-                <h3 class="aba-conteudo-titulo-principal">Estudar 4 cursos na Escola</h3>
+                <h3 class="aba-conteudo-titulo-principal">Estudar em casa falta 6 modulos</h3>
                 <h4 class="aba-conteudo-titulo-secundario">Tempo para completar o objetivo</h4>
-                <div class="contador"></div>
+                <div class="contador">
+                    <div class="contador-digito">
+                        <p class="contador-digito-numero" id="dias0"></p>
+                        <p class="contador-digito-texto">dias</p>
+                    </div>
+                    <div class="contador-digito">
+                        <p class="contador-digito-numero" id="horas0"></p>
+                        <p class="contador-digito-texto">horas</p>
+                    </div>
+                    <div class="contador-digito">
+                        <p class="contador-digito-numero" id="min0"></p>
+                        <p class="contador-digito-texto">min</p>
+                    </div>
+                    <div class="contador-digito">
+                        <p class="contador-digito-numero" id="seg0"></p>
+                        <p class="contador-digito-texto">seg</p>
+                    </div>
+                </div>
+            </div>
+            <div class="aba-conteudo">
+                <h3 class="aba-conteudo-titulo-principal">Guardar dinheiro para cumprir o objetivo</h3>
+                <h4 class="aba-conteudo-titulo-secundario">Tempo para completar o objetivo</h4>
+                <div class="contador">
+                    <div class="contador-digito">
+                        <p class="contador-digito-numero" id="dias1"></p>
+                        <p class="contador-digito-texto">dias</p>
+                    </div>
+                    <div class="contador-digito">
+                        <p class="contador-digito-numero" id="horas1"></p>
+                        <p class="contador-digito-texto">horas</p>
+                    </div>
+                    <div class="contador-digito">
+                        <p class="contador-digito-numero" id="min1"></p>
+                        <p class="contador-digito-texto">min</p>
+                    </div>
+                    <div class="contador-digito">
+                        <p class="contador-digito-numero" id="seg1"></p>
+                        <p class="contador-digito-texto">seg</p>
+                    </div>
+                </div>
             </div>
 
             <div class="aba-conteudo">
-                <h3 class="aba-conteudo-titulo-principal">Criar 5 projetos em Javascript</h3>
-                <h4 class="aba-conteudo-titulo-secundario">Tempo para completar o objetivo</h4>
-                <div class="contador"></div>
-            </div>
-
-            <div class="aba-conteudo">
-                <h3 class="aba-conteudo-titulo-principal">Criar um portifolio com os meus 3 melhores projetos</h3>
+                <h3 class="aba-conteudo-titulo-principal">Guardar dinheiro para cumprir o objetivo</h3>
                 <h4 class="aba-conteudo-titulo-secundario">tempo para completar o objetivo</h4>
-                <div class="contador"></div>
+                <div class="contador">
+                    <div class="contador-digito">
+                        <p class="contador-digito-numero" id="dias2"></p>
+                        <p class="contador-digito-texto">dias</p>
+                    </div>
+                    <div class="contador-digito">
+                        <p class="contador-digito-numero" id="horas2"></p>
+                        <p class="contador-digito-texto">horas</p>
+                    </div>
+                    <div class="contador-digito">
+                        <p class="contador-digito-numero" id="min2"></p>
+                        <p class="contador-digito-texto">min</p>
+                    </div>
+                    <div class="contador-digito">
+                        <p class="contador-digito-numero" id="seg2"></p>
+                        <p class="contador-digito-texto">seg</p>
+                    </div>
+                </div>
             </div>
 
             <div class="aba-conteudo">
-                <h3 class="aba-conteudo-titulo-principal">Atualizar meu currículo com os certificados da Escola</h3>
+                <h3 class="aba-conteudo-titulo-principal">Atualizar meu currículo com os certificados dos meus estudos</h3>
                 <h4 class="aba-conteudo-titulo-secundario">Tempo para completar o objetivo</h4>
-                <div class="contador"></div>
+                <div class="contador">
+                    <div class="contador-digito">
+                        <p class="contador-digito-numero" id="dias3"></p>
+                        <p class="contador-digito-texto">dias</p>
+                    </div>
+                    <div class="contador-digito">
+                        <p class="contador-digito-numero" id="horas3"></p>
+                        <p class="contador-digito-texto">horas</p>
+                    </div>
+                    <div class="contador-digito">
+                        <p class="contador-digito-numero" id="min3"></p>
+                        <p class="contador-digito-texto">min</p>
+                    </div>
+                    <div class="contador-digito">
+                        <p class="contador-digito-numero" id="seg3"></p>
+                        <p class="contador-digito-texto">seg</p>
+                    </div>
+                </div>
             </div>
 
         </div>

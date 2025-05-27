@@ -23,10 +23,18 @@ for (let i = 0; i < botoes.length; i++) {
   };
 }
 const contadores = document.querySelectorAll(".contador");
-const tempoObjetivo1 = new Date("2025-08-05T00:00:00");
-const tempoObjetivo2 = new Date("2025-01-05T00:00:00");
-const tempoObjetivo3 = new Date("2025-09-05T00:00:00");
-const tempoObjetivo4 = new Date("2025-10-05T00:00:00");
+const tempoObjetivo1 = new Date("2025-12-01T00:00:00");
+const tempoObjetivo2 = new Date("2028-01-05T00:00:00");
+const tempoObjetivo3 = new Date("2026-09-05T00:00:00");
+const tempoObjetivo4 = new Date("2029-10-05T00:00:00");
+
+// Atualiza o ano atual em todos os elementos com a classe "ano"
+const anoAtual = document.querySelectorAll(".ano");
+const agoraAtual = new Date();
+anoAtual.forEach(el => {
+  el.textContent = agoraAtual.getFullYear();
+});
+
 
 // Adiciona os tempos objetivos em um lista para facilitar o loop
 const tempos = [tempoObjetivo1, tempoObjetivo2, tempoObjetivo3, tempoObjetivo4];
@@ -45,17 +53,28 @@ function calculaTempo(tempoObjetivo) {
 
   if (tempoFinal > 0) {
     // Formata os valores para sempre ter dois dígitos com template literals
-    return `${dias} dias, ${horas} horas, ${minutos} minutos e ${segundos} segundos restantes até o evento.`;
+    return [dias, horas, minutos, segundos];
   } else {
-    return "O evento já encerrou!";
+    return [0,0,0,0];
   }
 }
 
 // Atualiza os contadores a cada segundo
 function atualizaCronometro() {
   for (let i = 0; i < contadores.length; i++) {
-    contadores[i].textContent = calculaTempo(tempos[i]);
+    //contadores[i].textContent = calculaTempo(tempos[i]);
+    document.getElementById("dias" + i).textContent = calculaTempo(
+      tempos[i]
+    )[0];
+    document.getElementById("horas" + i).textContent = calculaTempo(
+      tempos[i]
+    )[1];
+    document.getElementById("min" + i).textContent = calculaTempo(tempos[i])[2];
+    document.getElementById("seg" + i).textContent = calculaTempo(tempos[i])[3];
   }
 }
-atualizaCronometro(); // Atualiza imediatamente
-setInterval(atualizaCronometro, 1000); // Atualiza a cada segundo
+function comecaCronometro() {
+  atualizaCronometro(); // Atualiza imediatamente
+  setInterval(atualizaCronometro, 1000); // Atualiza a cada segundo
+}
+comecaCronometro(); // Inicia o cronômetro
